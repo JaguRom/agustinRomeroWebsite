@@ -20,13 +20,14 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #ffffff url("../img/backgroundtest/portfolio-details-1.svg") top right no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255,255,255,0.5)), url("../img/backgroundtest/portfolio-details-1.svg") top right no-repeat;
   background-size: cover;
   left: 0;
   right: 0;
   top: 0;
   height: 100vh;
   z-index: -1;
+  filter: invert(0);
 }
 
 @media (min-width: 1024px) {
@@ -411,7 +412,7 @@ section.section-show {
 }
 
 section .container {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.99);
   padding: 30px;
 }
 
@@ -588,7 +589,7 @@ section .container {
   display: flex;
   align-items: center;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   transition: ease-in-out 0.3s;
 }
 
@@ -608,8 +609,17 @@ section .container {
 }
 
 .interests .icon-box:hover {
-  background: #c3c3c3;
-  color:#000
+  border-image: linear-gradient(to top, #000 100%, transparent 70%) 1;
+  border-image-slice: 1;
+  transition: border-image 0.6s ease-in-out;
+}
+
+.interests .icon-box {
+  /* set up initial border style */
+  border: solid 1px transparent;
+  border-image: linear-gradient(to bottom, #000 20%, transparent 50%) 0.5;
+  border-image-slice: 1;
+  transition: border-image 0.6s ease-in-out;
 }
 
 /*--------------------------------------------------------------
@@ -1083,7 +1093,7 @@ section .container {
   border-radius: 50%;
   padding: 14px;
   float: left;
-  background: #0B67D0;
+  background: #000;
 }
 
 .contact .info-box h3 {
@@ -1339,4 +1349,8 @@ section .container {
   background-image: url(../img/backgroundCssTest/code-on-screen-scaled.jpg);
   background-size: cover;
   background-color: rgba(255, 255, 255, 0.9);
+}
+
+.text-dark{
+  color: #000;
 }
