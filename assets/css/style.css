@@ -20,8 +20,9 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255,255,255,0.2)), url("../img/backgroundtest/") top right no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2)), url("../img/../img/webportfolio/background/altCdarkFlip.jpg") top right no-repeat;
   background-size: cover;
+  opacity: 0.6;
   left: 0;
   right: 0;
   top: 0;
@@ -412,7 +413,7 @@ section.section-show {
 }
 
 section .container {
-  background: rgba(255, 255, 255, 0.99);
+  background: rgba(255, 255, 255, 0.8);
   padding: 30px;
 }
 
@@ -589,7 +590,7 @@ section .container {
   display: flex;
   align-items: center;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.8);
+  background: transparent;
   transition: ease-in-out 0.3s;
 }
 
@@ -609,7 +610,7 @@ section .container {
 }
 
 .interests .icon-box:hover {
-  border-image: linear-gradient(to top, #a5146d 100%, transparent 70%) 1;
+  border-image: linear-gradient(to top, #000 100%, transparent 70%) 1;
   border-image-slice: 1;
   transition: border-image 0.6s ease-in-out;
   border-radius: solid 20px;
@@ -1220,7 +1221,7 @@ section .container {
 }
 
 .contact .php-email-form button[type=submit] {
-  background: #0B67D0;;
+  background: #0B67D0;
   border: 0;
   padding: 10px 30px;
   color: #fff;
@@ -1361,22 +1362,34 @@ section .container {
   color: #000;
 }
 
-.text-darkline:hover{
-color: #a5146d!important;
-}
-
 .contactElement{
   color: #fff!important;
-  border: 4px solid #000;
+  border: 2px solid #000;
   border-radius: 0%;
+  background-image: url("../img/../img/webportfolio/background/altCdarkFlip.jpg");
 }
 .contactA{
 display: flex;
-padding: 32px 32px 0px 32px;
+justify-content: space-between;
+padding: 20px 40px;
 }
-.contactBtn{
-display: flex;
-justify-content: right;
+
+.contactBtn {
+  display: flex;
+  padding: 10px 20px 10px 30px;
+  margin-left: 20px;
+  color: #fff;
+  border: 2px solid #fff;
+  background-color: transparent;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+  font-size: 18px;
+  align-items: center;
+}
+
+.contactBtn:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #000;
 }
 
 
@@ -1391,6 +1404,9 @@ justify-content: right;
 }
 
 .contactText{
-  color: #000;
-  font-size: 32px
+  color: #fff;
+  font-size: 28px;
+padding: 1rem 1rem 1rem 1rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
