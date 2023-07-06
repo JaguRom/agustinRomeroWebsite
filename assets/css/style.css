@@ -20,7 +20,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2)), url("../img/../img/webportfolio/background/altCdarkFlip.jpg") top right no-repeat;
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("../img/../img/webportfolio/background/fullColor.jpg") top right no-repeat;
   background-size: cover;
   opacity: 0.6;
   left: 0;
@@ -286,6 +286,22 @@ h6 {
   transition: 0.3s;
 }
 
+@media (max-width: 769px){
+  .navbar a,
+  .navbar a:focus {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+}
+
 .navbar a i,
 .navbar a:focus i {
   font-size: 12px;
@@ -320,11 +336,20 @@ h6 {
   color: #000000;
 }
 
+@media (max-width: 769px){
+  .navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+  color: rgba(255, 255, 255, 0.9);
+}
+}
+
 /**
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #fff;
+  color: #000;
   font-size: 28px;
   cursor: pointer;
   display: none;
@@ -413,7 +438,7 @@ section.section-show {
 }
 
 section .container {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.5);
   padding: 30px;
 }
 
@@ -437,6 +462,12 @@ section .container {
   text-transform: uppercase;
   color: #000000;
   font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 425px){
+  .section-title h2 {
+    line-height: unset;
+  }
 }
 
 .section-title h2::before {
@@ -1276,6 +1307,12 @@ section .container {
   }
 }
 
+@media (max-width: 425px){
+  .credits{
+    color: #fff;
+  }
+}
+
 .credits a {
   color: #0B67D0;;
   transition: 0.3s;
@@ -1344,6 +1381,12 @@ section .container {
     border: 1px solid #000;
   }
 
+@media (max-width: 768px){
+  .imageFit{
+    width: inherit;
+  };
+}
+
 .bottom-padding{
   padding-bottom: 48px!important;
 }
@@ -1366,17 +1409,26 @@ section .container {
   color: #fff!important;
   border: 2px solid #000;
   border-radius: 0%;
-  background-image: url("../img/../img/webportfolio/background/altCdarkFlip.jpg");
+  background-image: linear-gradient(rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.2)), url(../img/../img/webportfolio/background/altCdarkFlip.jpg);
 }
 .contactA{
 display: flex;
 justify-content: space-between;
 padding: 20px 40px;
+filter: none;
 }
+
+@media (max-width: 425px){
+  .contactA{
+    padding: 0px
+  }
+}
+
 
 .contactBtn {
   display: flex;
-  padding: 10px 20px 10px 30px;
+  margin: 15px 15px 15px 15px;
+  padding: 10px 30px 10px 30px;
   margin-left: 20px;
   color: #fff;
   border: 2px solid #fff;
@@ -1390,6 +1442,18 @@ padding: 20px 40px;
   background-color: #fff;
   border-color: #fff;
   color: #000;
+}
+
+@media (max-width: 425px){
+  .contactBtn{
+    margin: 25px 25px 25px 25px;
+  }
+};
+
+@media (max-width: 370px){
+  .contactBtn{
+    padding: 15px 15px 15px 15px;
+}
 }
 
 
@@ -1409,4 +1473,27 @@ padding: 20px 40px;
 padding: 1rem 1rem 1rem 1rem;
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+@media (max-width: 370px){
+  .contactText{
+    font-size: 24px;
+  }
+}
+
+.contactPaddings{
+  padding: 0px 60px 0px 60px;
+}
+
+@media (max-width: 426px){
+  .contactPaddings{
+    padding: 0px 10px 0px 10px;
+  }
+}
+
+
+  @media (max-width: 426px){
+    .flex{
+    display: flex;
+  };
 }
