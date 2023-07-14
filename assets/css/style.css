@@ -286,7 +286,7 @@ h6 {
   transition: 0.3s;
 }
 
-@media (max-width: 769px){
+@media (max-width: 990px){
   .navbar a,
   .navbar a:focus {
     display: flex;
@@ -300,6 +300,7 @@ h6 {
     white-space: nowrap;
     transition: 0.3s;
   }
+
 }
 
 .navbar a i,
@@ -336,7 +337,7 @@ h6 {
   color: #000000;
 }
 
-@media (max-width: 769px){
+@media (max-width: 990px){
   .navbar a:hover,
 .navbar .active,
 .navbar .active:focus,
@@ -1379,13 +1380,9 @@ section .container {
   .imageFit{
     border-radius: 5%;
     border: 1px solid #000;
-  }
-
-@media (max-width: 768px){
-  .imageFit{
-    width: inherit;
   };
-}
+
+
 
 .bottom-padding{
   padding-bottom: 48px!important;
@@ -1406,11 +1403,13 @@ section .container {
 }
 
 .contactElement{
-  color: #fff!important;
-  border: 1px solid #ffffff;
+  color: #000000!important;
+  border: 1px solid #000000;
   border-radius: 1%;
-  background-image: linear-gradient(rgba(255, 0, 0, 0.2), rgba(255, 0, 0, 0.2)), url(../img/../img/webportfolio/background/altCdarkFlip.jpg);
+  background-image: url(../img/../img/webportfolio/background/fullColor.jpg);
 }
+
+
 .contactA{
 display: flex;
 justify-content: space-between;
@@ -1430,12 +1429,13 @@ filter: none;
   margin: 15px 15px 15px 15px;
   padding: 10px 30px 10px 30px;
   margin-left: 20px;
-  color: #fff;
-  border: 2px solid #fff;
+  color: #000000;
+  border: 2px solid #000000;
   background-color: transparent;
   transition: background-color 0.3s, border-color 0.3s, color 0.3s;
-  font-size: 18px;
+  font-size: 16px;
   align-items: center;
+  font-family: Montserrat;
 }
 
 .contactBtn:hover {
@@ -1446,7 +1446,13 @@ filter: none;
 
 @media (max-width: 425px){
   .contactBtn{
-    margin: 25px 25px 25px 25px;
+    margin: 40px 40px 40px 12px;
+  }
+};
+
+@media (max-width: 390px){
+  .contactBtn{
+    margin: 40px 40px 40px 12px;
   }
 };
 
@@ -1468,12 +1474,38 @@ filter: none;
 }
 
 .contactText{
-  color: #fff;
+  color: #000000;
   font-size: 28px;
-padding: 1rem 1rem 1rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
   margin-top: 0px;
   margin-bottom: 0px;
+  font-family: Montserrat;
 }
+
+@media (max-width: 390px){
+  .contactText{
+    color: #000000;
+    font-size: 18px;
+    padding: 2.5rem 1rem 1rem 1rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: Montserrat;
+  };
+}
+
+@media (min-width: 400px) and (max-width: 700px){
+  .contactText{
+    color: #000000;
+    font-size: 28px;
+    padding: 2rem 1rem 1rem 1rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-family: Montserrat;
+  };
+};
+
+
+
 
 @media (max-width: 370px){
   .contactText{
@@ -1503,4 +1535,58 @@ padding: 1rem 1rem 1rem 1rem;
   font-size: 14px;
   font-weight: bold;
   margin-left: -10px;
+}
+
+/*Change direction on resumee - mobile view*/
+@media (max-width: 950px){
+  .Rr{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+/*End*/
+
+/*About blocks fix on tablet view*/
+@media (min-width: 424px) and (max-width: 1020px){
+  #about > div.counts.container > div > div.col-lg-3.col-md-6.mt-5.mt-md-0{
+    margin-top: auto;
+  }
+}
+
+/*End*/
+
+@media (min-width: 1000px) and (max-width: 1440px){
+  .imageFit{
+    width: 100%;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 490px){
+  .imageFit{
+    width: inherit;
+    display: flex;
+    justify-content: center;
+  };
+};
+
+@media (min-width: 500px) and (max-width: 780px){
+  .imageFit{
+    width: 70%!important;
+    display: flex;
+    justify-content: center;
+  }
+};
+
+@media (min-width: 425px) and (max-width: 950px){
+.imageFit{
+  display: flex;
+  justify-content: center;
+}
+};
+
+@media (min-width: 768px) and (max-width: 980px){
+  #about > div.counts.container > div > div.col-lg-3.col-md-6.mt-5.mt-lg-0.mtFix{
+    margin-top: 0rem!important;
+  }
 }
