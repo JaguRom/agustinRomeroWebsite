@@ -8,6 +8,23 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+@media (min-width: 768px) and (max-width: 980px){
+  .mt-md-0{
+    margin-top: auto!important;
+  };
+  .mtFix{
+    margin-top: 0rem!important; 
+  };
+}
+
+@media (max-width: 750px){
+  .mtFix{
+    margin-top: 3rem!important; 
+  };
+}
+
+
 body {
   font-family: "Lato";
   background-color: #040404;
@@ -29,17 +46,18 @@ body::before {
   height: 100vh;
   z-index: -1;
   filter: invert(0);
-}
+};
+
 
 @media (min-width: 1024px) {
   body::before {
     background-attachment: fixed;
   }
-}
+};
 
 a {
   color: #0B67D0;
-  text-decoration: none;
+  text-decoration: none!important;
 }
 
 a:hover {
@@ -55,7 +73,27 @@ h5,
 h6 {
   font-family: "Montserrat", sans-serif;
   color:#000;
+  text-decoration: none!important;
 }
+
+/*Background pic media queries*/
+@media (max-width: 728px){
+  body::before {
+    content: "";
+    position: fixed;
+    background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url("../img/../img/webportfolio/background/Bluesky.jpg") top right no-repeat;
+    background-size: cover;
+    opacity: 0.6;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: -1;
+    filter: invert(0);
+  };
+}
+
+/*Background pic media queries*/
 
 /*--------------------------------------------------------------
 # Header
@@ -75,12 +113,12 @@ h6 {
 }
 
 #header h1 {
-  font-size: 48px;
+  font-size: 54px;
   margin: 0;
   padding: 0;
   line-height: 1;
   font-weight: 700;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Cormorant Garamond", sans-serif;
 }
 
 #header h1 a,
@@ -88,6 +126,7 @@ h6 {
   color: #0B67D0;
   line-height: 1;
   display: inline-block;
+  text-decoration: none;
 }
 
 .logo-text a,
@@ -385,6 +424,7 @@ h6 {
 }
 
 .navbar-mobile .mobile-nav-toggle {
+  filter: invert(1);
   position: absolute;
   top: 15px;
   right: 15px;
@@ -1547,11 +1587,6 @@ filter: none;
 /*End*/
 
 /*About blocks fix on tablet view*/
-@media (min-width: 424px) and (max-width: 1020px){
-  #about > div.counts.container > div > div.col-lg-3.col-md-6.mt-5.mt-md-0{
-    margin-top: auto;
-  }
-}
 
 /*End*/
 
@@ -1585,8 +1620,3 @@ filter: none;
 }
 };
 
-@media (min-width: 768px) and (max-width: 980px){
-  #about > div.counts.container > div > div.col-lg-3.col-md-6.mt-5.mt-lg-0.mtFix{
-    margin-top: 0rem!important;
-  }
-}
