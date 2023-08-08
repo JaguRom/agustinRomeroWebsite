@@ -9,6 +9,23 @@
 # General
 --------------------------------------------------------------*/
 
+@media (max-width: 425px){
+  .portfolio-images{
+    width: 350px;
+    height: 220px;
+    object-fit: contain
+  };
+}
+
+
+@media (max-width: 370px){
+  .contactText{
+    font-size: 16px!important;
+    margin-top: 12px;
+  }
+}
+
+
 @media (min-width: 768px) and (max-width: 980px){
   .mt-md-0{
     margin-top: auto!important;
@@ -24,6 +41,9 @@
   };
 }
 
+a {
+  text-decoration: none!important;
+}
 
 body {
   font-family: "Lato";
@@ -54,6 +74,7 @@ body::before {
     background-attachment: fixed;
   }
 };
+
 
 a {
   color: #0B67D0;
@@ -1370,6 +1391,12 @@ section .container {
   object-fit: cover; /* set the object-fit property */
 }
 
+@media (max-width: 390px){
+  .img-fixed{
+    width: 350px; /* set a fixed width */
+    height: 220px; /* set a fixed height */
+  }
+}
 /*Extra class*/
 .img-fixed-mob{
   width: 400px; /* set a fixed width */
@@ -1476,6 +1503,7 @@ filter: none;
   font-size: 16px;
   align-items: center;
   font-family: Montserrat;
+  text-decoration: none;
 }
 
 .contactBtn:hover {
@@ -1527,7 +1555,7 @@ filter: none;
     color: #000000;
     font-size: 18px;
     padding: 2.5rem 1rem 1rem 1rem;
-    margin-top: 0px;
+    margin-top: 6px;
     margin-bottom: 0px;
     font-family: Montserrat;
   };
@@ -1544,14 +1572,6 @@ filter: none;
   };
 };
 
-
-
-
-@media (max-width: 370px){
-  .contactText{
-    font-size: 24px;
-  }
-}
 
 .contactPaddings{
   padding: 0px 60px 0px 60px;
@@ -1619,4 +1639,5 @@ filter: none;
   justify-content: center;
 }
 };
+
 
