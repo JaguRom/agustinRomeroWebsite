@@ -1640,4 +1640,7 @@ filter: none;
 }
 };
 
-
+/*Remove radius from Portfolio buttons*/
+.noRadius{
+  border-radius: 0%!important;
+}
